@@ -1,0 +1,24 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 open classs room",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Sass/main.scss:./css/style.css --style expanded",
+    "prefix": "postcss css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alpha1788/JeanBaptisteLamotte_3_13122021.git"
+  },
+  "keywords": [
+    "123"
+  ],
+  "author": "Jean-Baptiste LAMOTTE",
+  "license": "ISC",
+  "browserslist":"last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Alpha1788/JeanBaptisteLamotte_3_13122021/issues"
+  },
+  "homepage": "https://github.com/Alpha1788/JeanBaptisteLamotte_3_13122021#readme"
+}

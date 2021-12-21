@@ -1,0 +1,12 @@
+.header {
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+    &__logo {
+        font-family: $font-logo;
+        font-size: 30px;
+    }
+    }
