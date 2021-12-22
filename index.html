@@ -11,23 +11,38 @@
 
 <body>
 
-    <header class="header">
-        <div class="header__main">
-            <h1 class="header__logo">ohmyfood</h1>
-        </div>
-    </header>
+    <div class="loader">
+        <span>o</span>
+        <span>h</span>
+        <span>m</span>
+        <span>y</span>
+        <span>f</span>
+        <span>o</span>
+        <span>o</span>
+        <span>d</span>
+    </div>
 
-    <section class="introduction">
-        <div class="introduction__localisation">
-            <label for="ville"><i class="fas fa-solid fa-location-dot"></i></label>
+
+    <header class="header">
+
+        <div class="header__main">
+            <h1>ohmyfood</h1>
+        </div>
+
+        <div class="header__localisation">
+            <label for="ville"><i class="fas fa-map-marker-alt"></i></label>
             <input type="text" name="recherche" placeholder="Paris,Belleville" id="ville">
         </div>
-        <div class="introduction__promesse">
+
+        <div class="header__promesses">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <input type="button" value="Explorez nos restaurants">
+            <a href="#resto">Explorer nos restaurants</a>
         </div>
-    </section>
+
+    </header>
+
+    
 
     <section class="fonctionnement">
         <h2 class="fonctionnement__titre">Fonctionnement</h2>

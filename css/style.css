@@ -1,44 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100&family=Shrikhand&display=swap");
-.header__main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-}
-.header__logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
-}
+/* Error: expected "}".
+ *    ,
+ * 17 |     };
+ *    |       ^
+ *    '
+ *   Sass\Components\_buttons.scss 17:7  @import
+ *   Sass\main.scss 2:9                  root stylesheet */
 
-.header__main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-}
-.header__logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
-}
-.header__back {
-  display: flex;
-  justify-content: left;
-}
-
-img {
-  width: 100%;
-  object-fit: cover;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "}".\a    \2577 \a 17 \2502      };\a    \2502        ^\a    \2575 \a   Sass\\Components\\_buttons.scss 17:7  @import\a   Sass\\main.scss 2:9                  root stylesheet';
 }
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-/*# sourceMappingURL=style.css.map */
