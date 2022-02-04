@@ -6,32 +6,79 @@
         font-weight: bold;
     }
     &__liste {
-        width: 95%;
-        &--operation {
-            font-family: $font-text;
-            text-align: start;
-            width: 95%;
-            background-color: #f6f6f6;
-            box-shadow: 2px 6px 20px rgb(153 153 153 / 60%);
-            border-radius: 20px;
-            padding: 20px 0;
-            margin-bottom: 25px;
-            
-            cursor: pointer;
-            
-            span {
-                background-color: $Main-Color;
-                color: white;
-                border-radius: 50px;
-                padding: 5.5px 10px;
-                margin: -2px -15px;
-                position: absolute;
-            }
-            i {
-                color: grey;
-                font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    &__operation {
+        position: relative;
 
-            }
+        font-family: $font-text;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        background-color: #f6f6f6;
+        box-shadow: 2px 6px 20px rgb(153 153 153 / 60%);
+        border-radius: 20px;
+        padding: 30px 0;
+        margin-bottom: 25px;    
+        cursor: pointer;
+            
+        span {
+            position: absolute;
+            left: -15px;
+            top: 28px;
+            background-color: $Main-Color;
+            color: white;
+            border-radius: 50px;
+            padding: 5px 10px;
+        }
+        i {
+            position: absolute;
+            left: 30px;
+            top: 32px;
+            color: grey;
+            font-size: 20px;
+
         }
     }
+}
+
+.restaurants {
+
+    @include center-max;
+
+    &__titre {
+        font-family: $font-text;
+        font-weight: bold;
+    }
+    &__carte {
+        position: relative;
+    }
+        img {
+            @include center-max;
+
+        }
+        span {
+            background: $Third-Color;
+            color: $Third-Color-Dark;
+            font-family: $font-text;
+            font-size: 20px;
+            font-weight: normal;
+            position: absolute;
+            top: rem-calc(15);
+            right: rem-calc(10);
+            padding: rem-calc(5 10);
+        
+        }
+        &--body {
+
+        }
+
+
+
+
+
+
 }

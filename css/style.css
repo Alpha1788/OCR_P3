@@ -15,6 +15,14 @@ a {
   color: black;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  top: -50%;
+}
+
 .loader {
   display: none;
 }
@@ -54,6 +62,7 @@ a {
   outline: none;
 }
 
+/* largeur max et auto centrage */
 .header__promesses {
   font-family: "Roboto", sans-serif;
   background-color: #eeeeee;
@@ -74,7 +83,10 @@ a {
 .header__promesses p {
   font-size: 18px;
 }
-.header__promesses div {
+.header__promesses a {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
   padding: 15px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: none;
@@ -83,41 +95,71 @@ a {
   cursor: pointer;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
 }
-.header__promesses div a {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-}
 
 .fonctionnement__titre {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 .fonctionnement__liste {
-  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.fonctionnement__liste--operation {
+.fonctionnement__operation {
+  position: relative;
   font-family: "Roboto", sans-serif;
-  text-align: start;
-  width: 95%;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
   background-color: #f6f6f6;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
   border-radius: 20px;
-  padding: 20px 0;
+  padding: 30px 0;
   margin-bottom: 25px;
   cursor: pointer;
 }
-.fonctionnement__liste--operation span {
+.fonctionnement__operation span {
+  position: absolute;
+  left: -15px;
+  top: 28px;
   background-color: #9356DC;
   color: white;
   border-radius: 50px;
-  padding: 5.5px 10px;
-  margin: -2px -15px;
-  position: absolute;
+  padding: 5px 10px;
 }
-.fonctionnement__liste--operation i {
+.fonctionnement__operation i {
+  position: absolute;
+  left: 30px;
+  top: 32px;
   color: grey;
   font-size: 20px;
+}
+
+.restaurants {
+  max-width: 1440px;
+  margin: auto;
+}
+.restaurants__titre {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+.restaurants__carte {
+  position: relative;
+}
+.restaurants img {
+  max-width: 1440px;
+  margin: auto;
+}
+.restaurants span {
+  background: #99E2D0;
+  color: #008766;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  top: rem-calc(15);
+  right: rem-calc(10);
+  padding: rem-calc(5 10);
 }
 
 /*# sourceMappingURL=style.css.map */
