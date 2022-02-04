@@ -3,12 +3,14 @@
     
     &__titre {
         font-family: $font-text;
-        font-weight: bold;
+        font-weight: 1000;
+        font-size: 25px;
     }
     &__liste {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        
         
     }
     &__operation {
@@ -43,42 +45,4 @@
 
         }
     }
-}
-
-.restaurants {
-
-    @include center-max;
-
-    &__titre {
-        font-family: $font-text;
-        font-weight: bold;
-    }
-    &__carte {
-        position: relative;
-    }
-        img {
-            @include center-max;
-
-        }
-        span {
-            background: $Third-Color;
-            color: $Third-Color-Dark;
-            font-family: $font-text;
-            font-size: 20px;
-            font-weight: normal;
-            position: absolute;
-            top: rem-calc(15);
-            right: rem-calc(10);
-            padding: rem-calc(5 10);
-        
-        }
-        &--body {
-
-        }
-
-
-
-
-
-
 }

@@ -1,0 +1,71 @@
+.restaurants {
+
+
+    &__titre {
+        font-family: $font-text;
+        font-weight: bold;
+    }
+    &__carte {
+        position: relative;
+        border-radius: 15px;
+        height: 265px;
+        margin-bottom: 20px;
+        background-color: rgb(245, 245, 245);
+        box-shadow: 2px 6px 20px rgb(153 153 153 / 60%);
+    }
+        img {
+            position: absolute;
+            top: 0;
+            height: 190px;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+
+        }
+        span {
+            position: absolute;
+            background: $Third-Color;
+            color: $Third-Color-Dark;
+            font-family: $font-text;
+            font-size: 15px;
+            font-weight: bold;
+            top: 15px;
+            right: 15px;;
+            padding: 7px 15px;
+            border-radius: 3px;
+        
+        }
+        h3 {
+            position: absolute;
+            top: 180px;
+            left: 12px;
+            font-family: $font-text;
+            font-size: 20px;
+            font-weight: 1000;
+
+            }
+        p {
+            position: absolute;
+            top: 210px;
+            left: 12px;
+            font-family: $font-text;
+            font-size: 20px;
+            font-weight: lighter;
+
+            }
+        i {
+            position: absolute;
+            right: 20px;
+            top: 220px;
+            font-size: 25px;
+            height: 45px;
+            empty-cells: initial;
+
+
+
+
+            }
+
+        
+
+
+}

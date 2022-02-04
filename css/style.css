@@ -77,16 +77,17 @@ img {
   padding-bottom: 55px;
 }
 .header__promesses h1 {
-  font-size: 22px;
-  font-weight: bolder;
+  font-size: 25px;
+  font-weight: 1000;
 }
 .header__promesses p {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: lighter;
 }
 .header__promesses a {
   color: white;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 600;
   padding: 15px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: none;
@@ -98,7 +99,8 @@ img {
 
 .fonctionnement__titre {
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-weight: 1000;
+  font-size: 25px;
 }
 .fonctionnement__liste {
   display: flex;
@@ -135,31 +137,60 @@ img {
   font-size: 20px;
 }
 
-.restaurants {
-  max-width: 1440px;
-  margin: auto;
-}
 .restaurants__titre {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 .restaurants__carte {
   position: relative;
+  border-radius: 15px;
+  height: 265px;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
 }
 .restaurants img {
-  max-width: 1440px;
-  margin: auto;
+  position: absolute;
+  top: 0;
+  height: 190px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
 }
 .restaurants span {
+  position: absolute;
   background: #99E2D0;
   color: #008766;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 15px;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+  padding: 7px 15px;
+  border-radius: 3px;
+}
+.restaurants h3 {
   position: absolute;
-  top: rem-calc(15);
-  right: rem-calc(10);
-  padding: rem-calc(5 10);
+  top: 180px;
+  left: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.restaurants p {
+  position: absolute;
+  top: 210px;
+  left: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.restaurants i {
+  position: absolute;
+  right: 20px;
+  top: 220px;
+  font-size: 25px;
+  height: 45px;
+  empty-cells: initial;
 }
 
 /*# sourceMappingURL=style.css.map */
