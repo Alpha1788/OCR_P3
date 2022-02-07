@@ -1,0 +1,119 @@
+.headermenu {
+    &__main {
+        position: relative;
+        height: 60px;
+        span {
+            position: absolute;
+            left: 10px;
+            top: 17px;
+        }
+        h1 {
+            font-family: $font-logo;
+            font-size: 200%;
+            text-align: center;
+
+            
+        }
+    }
+    &__banner {
+        &--img {
+        }
+    }
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+
+
+
+
+    &__titre {
+        position: relative;
+        h2 {
+            position: absolute;
+            font-family: $font-logo;
+            font-size: 140%;
+
+        }
+        i {
+
+        }
+
+    }
+    &__entrees {
+        div {
+
+        }
+        &--plat {
+            h3 {
+
+            }
+            p {
+
+            }
+            strong {
+
+            }
+        }
+    }
+    &__plats {
+        div {
+
+        }
+        &--plat {
+            h3 {
+
+            }
+            p {
+
+            }
+            strong {
+
+            }
+        }
+    }
+    &__desserts {
+        div {
+
+        }
+        &--plat {
+            h3 {
+
+            }
+            p {
+
+            }
+            strong {
+
+            }
+        }
+    }
+    &__btn {
+        
+
+
+        a {
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 15px;
+            background: linear-gradient(to bottom right, $Secondary-Color, $Main-Color);
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 2px 6px 20px rgb(153 153 153 / 60%);          
+        }   
+
+
+
+
+
+    }
+
+
+
+}
+
+   

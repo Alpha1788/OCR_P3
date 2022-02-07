@@ -55,10 +55,10 @@
         i {
             position: absolute;
             right: 20px;
-            top: 220px;
+            top: 210px;
             font-size: 25px;
             height: 45px;
-            empty-cells: initial;
+            color: $Main-Color; /*en attendant le degradé et l'animation*/
 
 
 

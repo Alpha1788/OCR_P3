@@ -1,0 +1,46 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    background-color: $Footer-Color;
+    color: white;
+    padding: 10px 0 0 30px;
+
+
+    &__logo {
+        display: flex;
+        color: white;
+        font-family: $font-logo;
+        font-size: 20px;
+        font-weight: lighter;
+
+
+    }
+    &__list {
+        flex-direction: column;
+        padding-left: 0;
+
+
+        li {
+            display: flex;
+            color: white;
+            margin-bottom: 10px;
+            justify-content: start;
+            i {
+            display: flex;
+            color: white;
+            margin-right: 15px;
+            font-size: 15px;
+            
+            
+            }
+            a {
+                font-family: $font-text;
+                color: white;
+                font-weight: lighter;
+                
+            }
+        }
+        
+    }
+}
