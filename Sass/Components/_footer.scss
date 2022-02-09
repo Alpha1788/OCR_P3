@@ -1,19 +1,19 @@
+
 .footer {
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 160px;
     background-color: $Footer-Color;
     color: white;
-    padding: 10px 0 0 30px;
+    padding: 10px 0 0 25px;
 
 
     &__logo {
         display: flex;
         color: white;
         font-family: $font-logo;
-        font-size: 20px;
         font-weight: lighter;
-
+        margin-bottom: 0;
 
     }
     &__list {
@@ -27,12 +27,14 @@
             margin-bottom: 10px;
             justify-content: start;
             i {
-            display: flex;
-            color: white;
-            margin-right: 15px;
-            font-size: 15px;
+                display: flex;
+                color: white;
+                margin-right: 25px;
+                font-size: 12px;
             
-            
+            &--proporesto {
+                padding-left: px;
+            }
             }
             a {
                 font-family: $font-text;
