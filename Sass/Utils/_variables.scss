@@ -1,0 +1,21 @@
+
+/* exemple
+$breakpoints: (
+  "pluton": (
+    max-width: 345px,
+  ),
+  "terre": (
+    min-width: 600px,
+  ),
+  "jupiter": (
+    min-width: 900px,
+  ),
+  "soleil": (
+    min-width: 1200px,
+  ),
+) !default;
+*/
+
+$breakpoint: (
+    "Kamino": 600px
+    );

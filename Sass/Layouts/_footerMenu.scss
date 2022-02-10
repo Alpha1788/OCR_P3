@@ -1,7 +1,9 @@
-.footer {
+.footerMenu {
     display: flex;
     flex-direction: column;
-    height: 190px;
+    position: relative;
+    top: 1200px;
+    height: 200px;
     background-color: $Footer-Color;
     color: white;
     padding: 10px 0 0 25px;
@@ -12,7 +14,7 @@
         font-family: $font-logo;
         font-weight: lighter;
         margin-bottom: 0;
-        font-size: 110%;
+        font-size: 120%;
     }
     &__list {
         flex-direction: column;
@@ -38,7 +40,6 @@
                 font-family: $font-text;
                 color: white;
                 font-weight: lighter;
-                font-size: 15px;
             }    
         }    
     }

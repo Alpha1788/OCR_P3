@@ -1,0 +1,30 @@
+.headermenu {
+    &__main {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 60px;
+        span {
+            position: absolute;
+            left: 15px;
+            display: flex;
+            align-self: center;
+            font-size: large;
+            font-weight: bold;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $font-logo;
+            font-size: 180%;
+            margin: auto;
+        }
+    }
+    &__banner {
+        &--img {
+            width: 100%;
+            max-height: 250px;
+        }
+    }
+}

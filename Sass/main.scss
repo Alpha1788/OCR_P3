@@ -1,13 +1,14 @@
 @import "Base/chartegraphique";
 @import "Base/base";
 @import "Layouts/header";
+@import "Layouts/headermenu";
 @import "Layouts/footer";
+@import "Layouts/footerMenu";
 @import "Pages/PageAcceuil";
 @import "Utils/variables";
 @import "Utils/mixins";
 @import "Utils/functions";
 @import "Utils/Animations";
-@import "Components/forms";
 @import "Components/promessesbtn";
 @import "Components/fonctionnement";
 @import "Components/restaurant";
