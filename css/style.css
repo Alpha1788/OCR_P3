@@ -67,6 +67,50 @@ img {
   outline: none;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  background-color: #353535;
+  color: white;
+  padding: 10px 0 0 25px;
+}
+.footer__logo {
+  display: flex;
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+  margin-bottom: 0;
+  font-size: 120%;
+}
+.footer__list {
+  flex-direction: column;
+  padding-left: 0;
+}
+.footer__list li {
+  display: flex;
+  color: white;
+  margin-bottom: 10px;
+  justify-content: start;
+}
+.footer__list li .fa-utensils {
+  display: flex;
+  color: white;
+  font-size: 15px;
+  margin-right: 15px;
+}
+.footer__list li .fa-hands-helping {
+  display: flex;
+  color: white;
+  font-size: 15px;
+  margin-right: 8px;
+}
+.footer__list li a {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: lighter;
+}
+
 /* largeur max et auto centrage */
 .header__promesses {
   font-family: "Roboto", sans-serif;
@@ -217,73 +261,39 @@ img {
   /*en attendant le degradé et l'animation*/
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  height: 160px;
-  background-color: #353535;
-  color: white;
-  padding: 10px 0 0 25px;
-}
-.footer__logo {
-  display: flex;
-  color: white;
-  font-family: "Shrikhand", cursive;
-  font-weight: lighter;
-  margin-bottom: 0;
-}
-.footer__list {
-  flex-direction: column;
-  padding-left: 0;
-}
-.footer__list li {
-  display: flex;
-  color: white;
-  margin-bottom: 10px;
-  justify-content: start;
-}
-.footer__list li i {
-  display: flex;
-  color: white;
-  margin-right: 25px;
-  font-size: 12px;
-}
-.footer__list li i--proporesto {
-  padding-left: px;
-}
-.footer__list li a {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  font-weight: lighter;
-}
-
 .headermenu__main {
   position: relative;
+  display: flex;
   width: 100%;
-  height: 40px;
+  height: 60px;
 }
 .headermenu__main span {
   position: absolute;
   left: 15px;
-  top: 10px;
+  display: flex;
+  align-self: center;
+  font-size: large;
+  font-weight: bold;
 }
 .headermenu__main h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Shrikhand", cursive;
-  font-size: 150%;
-  text-align: center;
+  font-size: 180%;
+  margin: auto;
 }
 .headermenu__banner--img {
-  position: absolute;
   width: 100%;
 }
 
 .menu {
   position: absolute;
-  border-radius: 30px;
+  border-radius: 25px 25px 0 0;
   background-color: white;
-  top: 230px;
   z-index: 1;
   width: 100%;
+  margin-top: -15px;
 }
 .menu__titre {
   position: relative;
@@ -291,141 +301,166 @@ img {
 .menu__titre h2 {
   position: absolute;
   left: 15px;
-  top: 10px;
+  top: 8px;
   font-family: "Shrikhand", cursive;
-  font-size: 120%;
+  font-size: 150%;
 }
 .menu__titre i {
   position: absolute;
   right: 30px;
-  top: 32px;
-  font-size: 120%;
+  top: 35px;
+  font-size: 160%;
 }
 .menu__entrees {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 .menu__entrees--titre {
   font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 15px;
-  width: 35px;
+  font-weight: lighter;
+  font-size: 18px;
+  width: 40px;
   padding-bottom: 5px;
   margin-left: 15px;
+  margin-bottom: 0;
   border-bottom: 3px #99E2D0 solid;
 }
 .menu__entrees--plat {
-  padding: 0 12px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  z-index: 1;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
-  height: 62px;
-  margin: 10px;
-  position: relative;
+  height: 70px;
+  padding: 0 12px;
 }
 .menu__entrees--plat h3 {
+  position: absolute;
+  top: -6px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 105%;
-  position: absolute;
-  top: -8px;
+  font-size: 110%;
 }
 .menu__entrees--plat p {
-  font-family: "Roboto", sans-serif;
-  font-size: 90%;
   position: absolute;
-  top: 20px;
+  top: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
 }
-.menu__entrees--plat strong {
+.menu__entrees--plat span {
+  position: absolute;
+  top: 40px;
+  right: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  position: absolute;
-  right: -325px;
+  font-size: 95%;
 }
 .menu__plats {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 .menu__plats--titre {
   font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 15px;
-  width: 35px;
+  font-weight: lighter;
+  font-size: 18px;
+  width: 40px;
   padding-bottom: 5px;
   margin-left: 15px;
+  margin-bottom: 0;
   border-bottom: 3px #99E2D0 solid;
 }
 .menu__plats--plat {
-  padding: 0 12px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  z-index: 1;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
-  height: 62px;
-  margin: 10px;
-  position: relative;
+  height: 70px;
+  padding: 0 12px;
 }
 .menu__plats--plat h3 {
+  position: absolute;
+  top: -6px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 105%;
-  position: absolute;
-  top: -8px;
+  font-size: 110%;
 }
 .menu__plats--plat p {
-  font-family: "Roboto", sans-serif;
-  font-size: 90%;
   position: absolute;
-  top: 20px;
+  top: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
 }
-.menu__plats--plat strong {
+.menu__plats--plat span {
+  position: absolute;
+  top: 40px;
+  right: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  position: absolute;
-  right: -325px;
+  font-size: 95%;
+}
+.menu__desserts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 .menu__desserts--titre {
   font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 15px;
-  width: 35px;
+  font-weight: lighter;
+  font-size: 18px;
+  width: 40px;
   padding-bottom: 5px;
   margin-left: 15px;
+  margin-bottom: 0;
   border-bottom: 3px #99E2D0 solid;
 }
 .menu__desserts--dessert {
-  padding: 0 12px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  z-index: 1;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
-  height: 62px;
-  margin: 10px;
-  position: relative;
+  height: 70px;
+  padding: 0 12px;
 }
 .menu__desserts--dessert h3 {
+  position: absolute;
+  top: -6px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 105%;
-  position: absolute;
-  top: -8px;
+  font-size: 110%;
 }
 .menu__desserts--dessert p {
-  font-family: "Roboto", sans-serif;
-  font-size: 90%;
   position: absolute;
-  top: 20px;
+  top: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
 }
-.menu__desserts--dessert strong {
+.menu__desserts--dessert span {
+  position: absolute;
+  top: 40px;
+  right: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  position: absolute;
-  right: -325px;
+  font-size: 95%;
 }
 .menu__btn {
-  margin-top: 50px;
+  margin-top: 70px;
+  margin-bottom: 70px;
   text-align: center;
 }
 .menu__btn a {
@@ -433,7 +468,7 @@ img {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 200;
-  padding: 15px 40px;
+  padding: 17px 55px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: none;
   border-radius: 25px;
@@ -442,38 +477,46 @@ img {
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
 }
 
-.footer {
+.footerMenu {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: 200px;
   background-color: #353535;
   color: white;
-  padding: 10px 0 0 30px;
+  padding: 10px 0 0 25px;
 }
-.footer__logo {
+.footerMenu__logo {
   display: flex;
   color: white;
   font-family: "Shrikhand", cursive;
-  font-size: 20px;
   font-weight: lighter;
+  margin-bottom: 0;
+  font-size: 120%;
 }
-.footer__list {
+.footerMenu__list {
   flex-direction: column;
   padding-left: 0;
 }
-.footer__list li {
+.footerMenu__list li {
   display: flex;
   color: white;
   margin-bottom: 10px;
   justify-content: start;
 }
-.footer__list li i {
+.footerMenu__list li .fa-utensils {
   display: flex;
   color: white;
-  margin-right: 15px;
   font-size: 15px;
+  margin-right: 15px;
 }
-.footer__list li a {
+.footerMenu__list li .fa-hands-helping {
+  display: flex;
+  color: white;
+  font-size: 15px;
+  margin-right: 8px;
+}
+.footerMenu__list li a {
   font-family: "Roboto", sans-serif;
   color: white;
   font-weight: lighter;
