@@ -25,6 +25,11 @@
         &--img {
             width: 100%;
             max-height: 250px;
+            object-fit: cover;
+            /*------Responsive Desktop------*/
+            @media screen and (min-width: 993px) {
+                max-height: 200px;
+            }
         }
     }
 }

@@ -4,33 +4,16 @@
     margin: auto;
 }
 
-/* Nom du plat trop long => points de suspension */
-@mixin text-wrap {
+/* Coupure des noms de plats trop long avec points de suspension */
+@mixin suspension {
+    width: 75%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
   
-  
-  
+
 /*Responsiv Design*/
 
-/*Smartphone*/
-
-@mixin Kamino {
-    @media screen and (max-width: map-get()) {}
-}
 
 
-/*Tablettes*/
-
-@mixin Tatooine {
-    @media all and (min-width: 601px) and (max-width: 992px) {}
-}
-
-
-/*Desktop*/
-
-@mixin Coruscant {
-    @media all and (min-width: 993px) and (max-width: 1400px) {}
-}

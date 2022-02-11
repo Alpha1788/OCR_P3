@@ -5,6 +5,15 @@
     background-color: $Footer-Color;
     color: white;
     padding: 10px 0 0 25px;
+    /*------Responsive Tablettes------*/
+    @media all and (min-width: 600px) and (max-width: 992px) {
+        align-items: center;
+    }
+    /*------Responsive Desktop------*/
+    @media screen and (min-width: 993px) {
+        align-items: center;
+    }
+
 
     &__logo {
         display: flex;
@@ -13,6 +22,14 @@
         font-weight: lighter;
         margin-bottom: 0;
         font-size: 110%;
+        /*------Responsive Tablettes------*/
+        @media all and (min-width: 600px) and (max-width: 992px) {
+            font-size: 150%;
+        }
+        /*------Responsive Desktop------*/
+        @media screen and (min-width: 993px) {
+            font-size: 200%;
+        }
     }
     &__list {
         flex-direction: column;
@@ -21,7 +38,17 @@
             display: flex;
             color: white;
             margin-bottom: 10px;
-            justify-content: start;  
+            justify-content: start;
+            /*------Responsive Tablettes------*/
+            @media all and (min-width: 600px) and (max-width: 992px) {
+                justify-content: center;
+                margin-top: 10px;
+            }
+            /*------Responsive Desktop------*/
+            @media screen and (min-width: 993px) {
+                justify-content: center;
+                margin-top: -2px;
+            }
             .fa-utensils {
                 display: flex;
                 color: white;
