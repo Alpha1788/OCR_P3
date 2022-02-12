@@ -88,17 +88,38 @@ img {
   font-family: "Shrikhand", cursive;
   font-size: 180%;
   margin: auto;
-}
-.headermenu__banner--img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
   /*------Responsive Desktop------*/
 }
 @media screen and (min-width: 993px) {
-  .headermenu__banner--img {
-    max-height: 200px;
+  .headermenu__main h1 {
+    font-weight: lighter;
+    font-size: 200%;
   }
+}
+.headermenu__banner {
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+}
+.headermenu__banner--palette {
+  width: 100%;
+  height: 300px;
+  background: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) center/cover;
+}
+.headermenu__banner--fra {
+  width: 100%;
+  height: 300px;
+  background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) center/cover;
+}
+.headermenu__banner--note {
+  width: 100%;
+  height: 300px;
+  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) center/cover;
+}
+.headermenu__banner--sens {
+  width: 100%;
+  height: 300px;
+  background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) center/cover;
 }
 
 .footer {
@@ -189,7 +210,6 @@ img {
   flex-direction: column;
   position: relative;
   top: 1200px;
-  height: 200px;
   background-color: #353535;
   color: white;
   padding: 10px 0 0 25px;
@@ -199,6 +219,7 @@ img {
 @media all and (min-width: 600px) and (max-width: 992px) {
   .footerMenu {
     align-items: center;
+    top: 1150px;
   }
 }
 @media screen and (min-width: 993px) {
@@ -207,6 +228,8 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
+    z-index: 2;
+    top: 550px;
   }
 }
 .footerMenu__logo {
@@ -546,6 +569,7 @@ img {
 
 .menu {
   position: absolute;
+  display: grid;
   border-radius: 40px 40px 0 0;
   background-color: #f8f8f8;
   z-index: 1;
@@ -555,7 +579,10 @@ img {
 }
 @media screen and (min-width: 993px) {
   .menu {
-    /*reprendre ici*/
+    margin: auto;
+    background: #f6f6f6;
+    padding: 40px auto 75px 15px;
+    border-radius: 40px 40px 0 0;
   }
 }
 .menu__titre {
@@ -567,6 +594,12 @@ img {
   top: 8px;
   font-family: "Shrikhand", cursive;
   font-size: 150%;
+  /*------Responsive Desktop------*/
+}
+@media screen and (min-width: 993px) {
+  .menu__titre h2 {
+    font-size: 180%;
+  }
 }
 .menu__titre i {
   position: absolute;
@@ -574,10 +607,26 @@ img {
   top: 35px;
   font-size: 160%;
 }
+.menu__ensemble {
+  /*------Responsive Desktop------*/
+}
+@media screen and (min-width: 993px) {
+  .menu__ensemble {
+    display: grid;
+    column-gap: 2.1875rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .menu__entrees {
   display: flex;
   flex-direction: column;
   margin-top: 80px;
+  /*------Responsive Desktop------*/
+}
+@media screen and (min-width: 993px) {
+  .menu__entrees {
+    margin-top: 100px;
+  }
 }
 .menu__entrees--titre {
   font-family: "Roboto", sans-serif;
@@ -633,6 +682,12 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  /*------Responsive Desktop------*/
+}
+@media screen and (min-width: 993px) {
+  .menu__plats {
+    margin-top: 100px;
+  }
 }
 .menu__plats--titre {
   font-family: "Roboto", sans-serif;
@@ -692,6 +747,12 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  /*------Responsive Desktop------*/
+}
+@media screen and (min-width: 993px) {
+  .menu__desserts {
+    margin-top: 100px;
+  }
 }
 .menu__desserts--titre {
   font-family: "Roboto", sans-serif;
@@ -749,6 +810,12 @@ img {
   margin-top: 70px;
   margin-bottom: 70px;
   text-align: center;
+  /*------Responsive Desktop------*/
+}
+@media screen and (min-width: 993px) {
+  .menu__btn {
+    margin-top: 60px;
+  }
 }
 .menu__btn a {
   color: white;
