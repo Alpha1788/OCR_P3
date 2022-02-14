@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Shrikhand&display=swap");
 body {
@@ -125,7 +124,7 @@ img {
 .footer {
   display: flex;
   flex-direction: column;
-  height: 190px;
+  position: relative;
   background-color: #353535;
   color: white;
   padding: 10px 0 0 25px;
@@ -139,7 +138,10 @@ img {
 }
 @media screen and (min-width: 993px) {
   .footer {
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
   }
 }
 .footer__logo {
@@ -148,7 +150,7 @@ img {
   font-family: "Shrikhand", cursive;
   font-weight: lighter;
   margin-bottom: 0;
-  font-size: 110%;
+  font-size: 120%;
   /*------Responsive Tablettes------*/
   /*------Responsive Desktop------*/
 }
@@ -160,11 +162,21 @@ img {
 @media screen and (min-width: 993px) {
   .footer__logo {
     font-size: 200%;
+    margin-top: 7px;
   }
 }
 .footer__list {
+  display: flex;
   flex-direction: column;
   padding-left: 0;
+  /*------Responsive Desktop------*/
+}
+@media screen and (min-width: 993px) {
+  .footer__list {
+    flex-direction: row;
+    margin-left: 40px;
+    margin-top: 22px;
+  }
 }
 .footer__list li {
   display: flex;
@@ -177,13 +189,12 @@ img {
 @media all and (min-width: 600px) and (max-width: 992px) {
   .footer__list li {
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 2px;
   }
 }
 @media screen and (min-width: 993px) {
   .footer__list li {
-    justify-content: center;
-    margin-top: -2px;
+    margin-left: 65px;
   }
 }
 .footer__list li .fa-utensils {
@@ -202,7 +213,11 @@ img {
   font-family: "Roboto", sans-serif;
   color: white;
   font-weight: lighter;
-  font-size: 15px;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.footer__list li a:hover {
+  transform: scale(1.1);
 }
 
 .footerMenu {
@@ -301,6 +316,11 @@ img {
   font-family: "Roboto", sans-serif;
   color: white;
   font-weight: lighter;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.footerMenu__list li a:hover {
+  transform: scale(1.1);
 }
 
 /*Partie Promesses*/
@@ -339,6 +359,15 @@ img {
   text-align: center;
   cursor: pointer;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
+  /*Animation bouton*/
+  transform: scale(1);
+  transition: transform 300ms;
+  opacity: 1;
+}
+.header__promesses a:hover {
+  transform: scale(1.15);
+  box-shadow: 2px 6px 20px #6e6e6e;
+  opacity: 0.9;
 }
 
 /*Partie Fonctionnement*/
@@ -401,8 +430,18 @@ img {
   padding: 25px 0;
   margin-bottom: 20px;
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 300ms;
   /*------Responsive Tablettes------*/
   /*------Responsive Desktop------*/
+}
+.fonctionnement__operation:hover {
+  transform: scale(1.15);
+  box-shadow: 2px 6px 20px #a1a1a1;
+  background-color: #f5edff8c;
+}
+.fonctionnement__operation:hover i {
+  color: #9356DC;
 }
 @media all and (min-width: 600px) and (max-width: 992px) {
   .fonctionnement__operation {
@@ -441,7 +480,6 @@ img {
 .restaurants {
   background-color: #f7f6f6;
   height: auto;
-  padding-bottom: 60px;
 }
 .restaurants__titre {
   font-family: "Roboto", sans-serif;
@@ -461,7 +499,7 @@ img {
 @media screen and (min-width: 993px) {
   .restaurants__titre {
     text-align: center;
-    font-size: 160%;
+    font-size: 180%;
   }
 }
 .restaurants__responsive {
@@ -482,6 +520,7 @@ img {
     gap: 10px 70px;
     grid-template-columns: 1fr 1fr;
     padding: 0 70px;
+    padding-bottom: 150px;
   }
 }
 .restaurants__carte {
@@ -491,7 +530,14 @@ img {
   margin: 20px 15px;
   background-color: whitesmoke;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
+  transform: scale(1);
+  transition: transform 300ms;
+  opacity: 1;
   /*------Responsive Desktop------*/
+}
+.restaurants__carte:hover {
+  transform: scale(1.15);
+  box-shadow: 10px 10px 20px #666666;
 }
 @media screen and (min-width: 993px) {
   .restaurants__carte {
@@ -551,20 +597,22 @@ img {
     top: 270px;
   }
 }
-.restaurants i {
+.restaurants .fa-heart {
   position: absolute;
   right: 20px;
   top: 185px;
   font-size: 120%;
   height: 45px;
-  color: #9356DC;
-  /*en attendant le degradé et l'animation*/
+  color: black;
   /*------Responsive Desktop------*/
 }
 @media screen and (min-width: 993px) {
-  .restaurants i {
+  .restaurants .fa-heart {
     top: 265px;
   }
+}
+.restaurants .fa-regular-fa-heart {
+  color: #a81818;
 }
 
 .menu {
