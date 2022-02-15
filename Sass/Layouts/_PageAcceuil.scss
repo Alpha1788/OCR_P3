@@ -219,72 +219,93 @@
             height: 310px;
         }
     }
-        img {
-            position: absolute;
-            top: 0;
-            height: 170px;
-            width: 100%;
-            border-radius: 15px 15px 0 0;
-            /*------Responsive Desktop------*/
+    img {
+        position: absolute;
+        top: 0;
+        height: 170px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        /*------Responsive Desktop------*/
             @media screen and (min-width: 993px) {
                 height: 250px;
             }
 
-        }
-        span {
-            position: absolute;
-            background: $Third-Color;
-            color: $Third-Color-Dark;
-            font-family: $font-text;
-            font-size: 12px;
-            font-weight: bold;
-            top: 12px;
-            right: 12px;
-            padding: 5px 10px;
-            border-radius: 2px;
+    }
+    span {
+        position: absolute;
+        background: $Third-Color;
+        color: $Third-Color-Dark;
+        font-family: $font-text;
+        font-size: 12px;
+        font-weight: bold;
+        top: 12px;
+        right: 12px;
+        padding: 5px 10px;
+        border-radius: 2px;
             
-        
-        }
-        h3 {
-            position: absolute;
-            top: 165px;
-            left: 12px;
-            font-family: $font-text;
-            font-size: 100%;
-            font-weight: 1000;
-            /*------Responsive Desktop------*/
+    }
+    h3 {
+        position: absolute;
+        top: 165px;
+        left: 12px;
+        font-family: $font-text;
+        font-size: 100%;
+        font-weight: 1000;
+        /*------Responsive Desktop------*/
             @media screen and (min-width: 993px) {
                 top: 243px;
             }
 
-            }
-        p {
-            position: absolute;
-            top: 190px;
-            left: 12px;
-            font-family: $font-text;
-            font-size: 90%;
-            font-weight: lighter;
-            /*------Responsive Desktop------*/
+    }
+    p {
+        position: absolute;
+        top: 190px;
+        left: 12px;
+        font-family: $font-text;
+        font-size: 90%;
+        font-weight: lighter;
+        /*------Responsive Desktop------*/
             @media screen and (min-width: 993px) {
                 top: 270px;
             }
+    }
+    
+    .fa-heart {
+        position: absolute;
+        right: 20px;
+        top: 185px;
+        font-size: 120%;
+        height: 45px;
+        color: black;
+        background-color: rgb(245, 245, 245);
+        cursor: pointer;
+        /*------Responsive mobile et Tablettes pour l'animation au clic------*/
+        @media all and (min-width: 100px) and (max-width: 992px) {
+            &:active {
+                color: $Main-Color;
+                font-weight:bold;
+            } 
+        }
 
-            }
-        .fa-heart {
-            position: absolute;
-            right: 20px;
-            top: 185px;
-            font-size: 120%;
-            height: 45px;
-            color: black;
-            /*------Responsive Desktop------*/
-            @media screen and (min-width: 993px) {
-                top: 265px;
-            }
-            }
-            .fa-regular-fa-heart {
-                color: rgb(168, 24, 24);
 
-            }
+        /*------Responsive Desktop------*/
+        @media screen and (min-width: 993px) {
+            top: 265px;
+            &:hover {
+            color: $Main-Color;
+            font-weight:bold;
+        }
+        }
+
+
+
+
+        
+
+
+
+
+
+    }             
 }
+

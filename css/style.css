@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Shrikhand&display=swap");
 body {
@@ -604,15 +605,25 @@ img {
   font-size: 120%;
   height: 45px;
   color: black;
+  background-color: whitesmoke;
+  cursor: pointer;
+  /*------Responsive mobile et Tablettes pour l'animation au clic------*/
   /*------Responsive Desktop------*/
+}
+@media all and (min-width: 100px) and (max-width: 992px) {
+  .restaurants .fa-heart:active {
+    color: #9356DC;
+    font-weight: bold;
+  }
 }
 @media screen and (min-width: 993px) {
   .restaurants .fa-heart {
     top: 265px;
   }
-}
-.restaurants .fa-regular-fa-heart {
-  color: #a81818;
+  .restaurants .fa-heart:hover {
+    color: #9356DC;
+    font-weight: bold;
+  }
 }
 
 .menu {
@@ -655,6 +666,10 @@ img {
   top: 35px;
   font-size: 160%;
 }
+.menu__titre i:hover {
+  color: #9356DC;
+  font-weight: bold;
+}
 .menu__ensemble {
   /*------Responsive Desktop------*/
 }
@@ -686,7 +701,7 @@ img {
   margin-bottom: 0;
   border-bottom: 3px #99E2D0 solid;
 }
-.menu__entrees--plat {
+.menu__entrees--plat1, .menu__entrees--plat2, .menu__entrees--plat3 {
   position: relative;
   margin: 15px 15px 0 15px;
   z-index: 1;
@@ -697,7 +712,7 @@ img {
   padding: 0 12px;
   overflow: hidden;
 }
-.menu__entrees--plat h3 {
+.menu__entrees--plat1 h3, .menu__entrees--plat2 h3, .menu__entrees--plat3 h3 {
   position: absolute;
   top: -6px;
   font-family: "Roboto", sans-serif;
@@ -708,7 +723,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__entrees--plat p {
+.menu__entrees--plat1 p, .menu__entrees--plat2 p, .menu__entrees--plat3 p {
   position: absolute;
   top: 24px;
   font-family: "Roboto", sans-serif;
@@ -718,7 +733,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__entrees--plat span {
+.menu__entrees--plat1 span, .menu__entrees--plat2 span, .menu__entrees--plat3 span {
   position: absolute;
   top: 40px;
   right: 30px;
@@ -747,7 +762,7 @@ img {
   margin-bottom: 0;
   border-bottom: 3px #99E2D0 solid;
 }
-.menu__plats--plat {
+.menu__plats--plat1, .menu__plats--plat2, .menu__plats--plat3 {
   position: relative;
   margin-top: 15px;
   margin-left: 15px;
@@ -760,7 +775,7 @@ img {
   height: 70px;
   padding: 0 12px;
 }
-.menu__plats--plat h3 {
+.menu__plats--plat1 h3, .menu__plats--plat2 h3, .menu__plats--plat3 h3 {
   position: absolute;
   top: -6px;
   font-family: "Roboto", sans-serif;
@@ -771,7 +786,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__plats--plat p {
+.menu__plats--plat1 p, .menu__plats--plat2 p, .menu__plats--plat3 p {
   position: absolute;
   top: 24px;
   font-family: "Roboto", sans-serif;
@@ -783,7 +798,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__plats--plat span {
+.menu__plats--plat1 span, .menu__plats--plat2 span, .menu__plats--plat3 span {
   position: absolute;
   top: 40px;
   right: 30px;
@@ -812,7 +827,7 @@ img {
   margin-bottom: 0;
   border-bottom: 3px #99E2D0 solid;
 }
-.menu__desserts--dessert {
+.menu__desserts--dessert1, .menu__desserts--dessert2, .menu__desserts--dessert3 {
   position: relative;
   margin-top: 15px;
   margin-left: 15px;
@@ -825,7 +840,7 @@ img {
   height: 70px;
   padding: 0 12px;
 }
-.menu__desserts--dessert h3 {
+.menu__desserts--dessert1 h3, .menu__desserts--dessert2 h3, .menu__desserts--dessert3 h3 {
   position: absolute;
   top: -6px;
   font-family: "Roboto", sans-serif;
@@ -836,7 +851,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__desserts--dessert p {
+.menu__desserts--dessert1 p, .menu__desserts--dessert2 p, .menu__desserts--dessert3 p {
   position: absolute;
   top: 24px;
   font-family: "Roboto", sans-serif;
@@ -846,7 +861,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__desserts--dessert span {
+.menu__desserts--dessert1 span, .menu__desserts--dessert2 span, .menu__desserts--dessert3 span {
   position: absolute;
   top: 40px;
   right: 30px;
@@ -889,5 +904,155 @@ img {
 /* largeur max et auto centrage */
 /* Coupure des noms de plats trop long avec points de suspension */
 /*Responsiv Design*/
+/*===================================================
+                    loading spinner
+====================================================*/
+.loader {
+  perspective: 23rem;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #353535;
+  position: fixed;
+  z-index: 2;
+  animation: background 2500ms both;
+}
+.loader span {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  display: inline-block;
+  animation: flip 2000ms none;
+  transform-origin: bottom right 120px;
+  transform-style: preserve-3d;
+  text-align: center;
+  font-size: 250%;
+  /*------Responsive Tablettes------*/
+  /*------Responsive Desktop------*/
+}
+@media all and (min-width: 600px) and (max-width: 992px) {
+  .loader span {
+    font-size: 300%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .loader span {
+    font-size: 500%;
+  }
+}
+
+/*affichage du fond*/
+@keyframes background {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+/*animation des lettres*/
+@keyframes flip {
+  100% {
+    transform: rotateX(360deg);
+  }
+  70% {
+    transform: rotateX(360deg);
+  }
+}
+/*Couleurs des lettres*/
+.loader > span:nth-child(n+5) {
+  color: #FF79DA;
+}
+
+.loader > span:nth-child(-n+2) {
+  color: #9356DC;
+}
+
+/*Declenccheur de rotation des lettres*/
+.loader > span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader > span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loader > span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loader > span:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.loader > span:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.loader > span:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.loader > span:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+.loader > span:nth-child(8) {
+  animation-delay: 0.45s;
+}
+
+/*========================================================================
+                    Apparition progressive des plats
+=========================================================================*/
+@keyframes dishes {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*----------apparition progressive de plats----------*/
+/*Entrées*/
+.menu__entrees--plat1 {
+  animation: dishes 1s ease 300ms 1 normal both;
+}
+
+.menu__entrees--plat2 {
+  animation: dishes 1s ease 400ms 1 normal both;
+}
+
+.menu__entrees--plat3 {
+  animation: dishes 1s ease 500ms 1 normal both;
+}
+
+/*Plats*/
+.menu__plats--plat1 {
+  animation: dishes 1s ease 800ms 1 normal both;
+}
+
+.menu__plats--plat2 {
+  animation: dishes 1s ease 900ms 1 normal both;
+}
+
+.menu__plats--plat3 {
+  animation: dishes 1s ease 1000ms 1 normal both;
+}
+
+/*Desserts*/
+.menu__desserts--dessert1 {
+  animation: dishes 1s ease 1100ms 1 normal both;
+}
+
+.menu__desserts--dessert2 {
+  animation: dishes 1s ease 1200ms 1 normal both;
+}
+
+.menu__desserts--dessert3 {
+  animation: dishes 1s ease 1300ms 1 normal both;
+}
 
 /*# sourceMappingURL=style.css.map */

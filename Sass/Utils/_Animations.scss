@@ -64,27 +64,76 @@
     animation-delay: 0.1000s;
   }
   .loader > span:nth-child(2) {
-    animation-delay: 0.2000s;
+    animation-delay: 0.1500s;
   }
   .loader > span:nth-child(3) {
-    animation-delay: 0.3000s;
+    animation-delay: 0.2000s;
   }
   .loader > span:nth-child(4) {
-    animation-delay: 0.4000s;
+    animation-delay: 0.2500s;
   }
   .loader > span:nth-child(5) {
-    animation-delay: 0.5000s;
+    animation-delay: 0.3000s;
   }
   .loader > span:nth-child(6) {
-    animation-delay: 0.6000s;
+    animation-delay: 0.3500s;
   }
   .loader > span:nth-child(7) {
-    animation-delay: 0.7000s;
+    animation-delay: 0.4000s;
   }
   .loader > span:nth-child(8) {
-    animation-delay: 0.8000s;
+    animation-delay: 0.4500s;
   }
 
 
 
-  
+/*========================================================================
+                    Apparition progressive des plats
+=========================================================================*/
+
+@keyframes dishes {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*----------apparition progressive de plats----------*/
+
+/*Entrées*/
+.menu__entrees--plat1 {
+  animation: dishes 1s ease 300ms 1 normal both;
+}
+.menu__entrees--plat2 {
+  animation: dishes 1s ease 400ms 1 normal both;
+}
+.menu__entrees--plat3 {
+  animation: dishes 1s ease 500ms 1 normal both;
+}
+/*Plats*/
+.menu__plats--plat1 {
+  animation: dishes 1s ease 800ms 1 normal both;
+}
+.menu__plats--plat2 {
+  animation: dishes 1s ease 900ms 1 normal both;
+}
+.menu__plats--plat3 {
+  animation: dishes 1s ease 1000ms 1 normal both;
+}
+/*Desserts*/
+.menu__desserts--dessert1 {
+  animation: dishes 1s ease 1100ms 1 normal both;
+}
+.menu__desserts--dessert2 {
+  animation: dishes 1s ease 1200ms 1 normal both;
+}
+.menu__desserts--dessert3 {
+  animation: dishes 1s ease 1300ms 1 normal both;
+}
+
+

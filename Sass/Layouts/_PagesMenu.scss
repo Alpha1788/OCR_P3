@@ -33,6 +33,11 @@
             right: 30px;
             top: 35px;
             font-size: 160%;
+            &:hover {
+                color: $Main-Color;
+                font-weight:bold;
+            }
+
         }
     }
     &__ensemble {
@@ -63,7 +68,7 @@
             margin-bottom: 0;
             border-bottom: 3px $Third-Color solid;
         }
-        &--plat {
+        &--plat1, &--plat2, &--plat3 {
             position: relative;
             margin: 15px 15px 0 15px;
             z-index: 1;
@@ -125,7 +130,7 @@
             margin-bottom: 0;
             border-bottom: 3px $Third-Color solid;
         }
-        &--plat {
+        &--plat1, &--plat2, &--plat3 {
             position: relative;
             margin-top: 15px;
             margin-left: 15px;
@@ -190,7 +195,7 @@
             margin-bottom: 0;
             border-bottom: 3px $Third-Color solid;
         }
-        &--dessert {
+        &--dessert1, &--dessert2, &--dessert3 {
             position: relative;
             margin-top: 15px;
             margin-left: 15px;
