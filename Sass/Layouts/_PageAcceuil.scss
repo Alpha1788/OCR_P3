@@ -110,9 +110,13 @@
         transform: scale(1);
             transition: transform 300ms;
             &:hover {
-                transform: scale(1.15);
+                transform: scale(1.05);
                 box-shadow: 2px 6px 20px rgb(161, 161, 161);
                 background-color: #f5edff8c;
+                /*------Responsive a partir de Tablettes------*/
+                @media screen and (min-width: 600px) {
+                    transform: scale(1.15);
+                }
                 i {
                     color: $Main-Color;
                 }
@@ -210,13 +214,18 @@
         transition: transform 300ms;
         opacity: 1;
         &:hover {
-            transform: scale(1.15);
+            transform: scale(1.05);
             box-shadow: 10px 10px 20px rgb(102, 102, 102);
+            /*------Responsive a partir de Tablettes------*/
+            @media screen and (min-width: 600px) {
+                transform: scale(1.10);
+            }
 
         }
         /*------Responsive Desktop------*/
         @media screen and (min-width: 993px) {
             height: 310px;
+
         }
     }
     img {
@@ -280,7 +289,7 @@
         background-color: rgb(245, 245, 245);
         cursor: pointer;
         /*------Responsive mobile et Tablettes pour l'animation au clic------*/
-        @media all and (min-width: 100px) and (max-width: 992px) {
+        @media all and (max-width: 992px) {
             &:active {
                 color: $Main-Color;
                 font-weight:bold;

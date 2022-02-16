@@ -437,9 +437,15 @@ img {
   /*------Responsive Desktop------*/
 }
 .fonctionnement__operation:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   box-shadow: 2px 6px 20px #a1a1a1;
   background-color: #f5edff8c;
+  /*------Responsive a partir de Tablettes------*/
+}
+@media screen and (min-width: 600px) {
+  .fonctionnement__operation:hover {
+    transform: scale(1.15);
+  }
 }
 .fonctionnement__operation:hover i {
   color: #9356DC;
@@ -537,8 +543,14 @@ img {
   /*------Responsive Desktop------*/
 }
 .restaurants__carte:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   box-shadow: 10px 10px 20px #666666;
+  /*------Responsive a partir de Tablettes------*/
+}
+@media screen and (min-width: 600px) {
+  .restaurants__carte:hover {
+    transform: scale(1.1);
+  }
 }
 @media screen and (min-width: 993px) {
   .restaurants__carte {
@@ -610,7 +622,7 @@ img {
   /*------Responsive mobile et Tablettes pour l'animation au clic------*/
   /*------Responsive Desktop------*/
 }
-@media all and (min-width: 100px) and (max-width: 992px) {
+@media all and (max-width: 992px) {
   .restaurants .fa-heart:active {
     color: #9356DC;
     font-weight: bold;
@@ -665,10 +677,17 @@ img {
   right: 30px;
   top: 35px;
   font-size: 160%;
+  /*------Responsive Desktop------*/
 }
-.menu__titre i:hover {
+.menu__titre i:active {
   color: #9356DC;
   font-weight: bold;
+}
+@media screen and (min-width: 993px) {
+  .menu__titre i:hover {
+    color: #9356DC;
+    font-weight: bold;
+  }
 }
 .menu__ensemble {
   /*------Responsive Desktop------*/
@@ -705,12 +724,25 @@ img {
   position: relative;
   margin: 15px 15px 0 15px;
   z-index: 1;
+  cursor: pointer;
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.4);
   height: 70px;
   padding: 0 12px;
   overflow: hidden;
+}
+.menu__entrees--plat1:hover .checkBox, .menu__entrees--plat2:hover .checkBox, .menu__entrees--plat3:hover .checkBox {
+  transition: transform 400ms ease-in-out;
+  transform: translate(-66px, 0);
+  /*------Responsive fractionné pour bon fonctionnement a chaque taille d'ecran------*/
+}
+.menu__entrees--plat1:hover .checkBox span, .menu__entrees--plat2:hover .checkBox span, .menu__entrees--plat3:hover .checkBox span {
+  right: 70px;
+}
+.menu__entrees--plat1:hover .checkBox i, .menu__entrees--plat2:hover .checkBox i, .menu__entrees--plat3:hover .checkBox i {
+  transform: rotate(1turn);
+  transition: transform 400ms ease-in-out;
 }
 .menu__entrees--plat1 h3, .menu__entrees--plat2 h3, .menu__entrees--plat3 h3 {
   position: absolute;
@@ -724,6 +756,7 @@ img {
   text-overflow: ellipsis;
 }
 .menu__entrees--plat1 p, .menu__entrees--plat2 p, .menu__entrees--plat3 p {
+  display: flex;
   position: absolute;
   top: 24px;
   font-family: "Roboto", sans-serif;
@@ -733,13 +766,41 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__entrees--plat1 span, .menu__entrees--plat2 span, .menu__entrees--plat3 span {
+.menu__entrees--plat1 .checkBox, .menu__entrees--plat2 .checkBox, .menu__entrees--plat3 .checkBox {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  right: -70px;
+  /*------Responsive fractionné pour bon fonctionnement a chaque taille d'ecran------*/
+  width: 15%;
+  height: 100%;
+  background-color: #99E2D0;
+  font-size: 25px;
+}
+@media screen and (min-width: 475px) and (max-width: 600px) {
+  .menu__entrees--plat1 .checkBox, .menu__entrees--plat2 .checkBox, .menu__entrees--plat3 .checkBox {
+    right: -87px;
+  }
+}
+.menu__entrees--plat1 .checkBox span, .menu__entrees--plat2 .checkBox span, .menu__entrees--plat3 .checkBox span {
   position: absolute;
   top: 40px;
-  right: 30px;
+  right: 80px;
+  /*------Responsive fractionné pour bon fonctionnement a chaque taille d'ecran------*/
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 95%;
+  color: black;
+  font-size: 18px;
+}
+@media screen and (min-width: 475px) and (max-width: 600px) {
+  .menu__entrees--plat1 .checkBox span, .menu__entrees--plat2 .checkBox span, .menu__entrees--plat3 .checkBox span {
+    right: 100px;
+  }
+}
+.menu__entrees--plat1 .checkBox i, .menu__entrees--plat2 .checkBox i, .menu__entrees--plat3 .checkBox i {
+  margin: auto;
+  font-weight: 900;
+  color: white;
 }
 .menu__plats {
   display: flex;
@@ -764,16 +825,23 @@ img {
 }
 .menu__plats--plat1, .menu__plats--plat2, .menu__plats--plat3 {
   position: relative;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 15px 15px 0 15px;
   z-index: 1;
+  cursor: pointer;
   background-color: white;
   border-radius: 15px;
-  overflow: hidden;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.4);
   height: 70px;
   padding: 0 12px;
+  overflow: hidden;
+}
+.menu__plats--plat1:hover .checkBox, .menu__plats--plat2:hover .checkBox, .menu__plats--plat3:hover .checkBox {
+  transition: transform 400ms ease-in-out;
+  transform: translate(-65px, 0);
+}
+.menu__plats--plat1:hover .checkBox i, .menu__plats--plat2:hover .checkBox i, .menu__plats--plat3:hover .checkBox i {
+  transform: rotate(360deg);
+  transition: transform 400ms ease-in-out;
 }
 .menu__plats--plat1 h3, .menu__plats--plat2 h3, .menu__plats--plat3 h3 {
   position: absolute;
@@ -787,24 +855,39 @@ img {
   text-overflow: ellipsis;
 }
 .menu__plats--plat1 p, .menu__plats--plat2 p, .menu__plats--plat3 p {
+  display: flex;
   position: absolute;
   top: 24px;
   font-family: "Roboto", sans-serif;
   font-size: 100%;
-  min-width: 150px;
-  max-width: 300px;
   width: 75%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__plats--plat1 span, .menu__plats--plat2 span, .menu__plats--plat3 span {
+.menu__plats--plat1 .checkBox, .menu__plats--plat2 .checkBox, .menu__plats--plat3 .checkBox {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  right: -68px;
+  width: 15%;
+  height: 100%;
+  background-color: #99E2D0;
+  font-size: 25px;
+}
+.menu__plats--plat1 .checkBox span, .menu__plats--plat2 .checkBox span, .menu__plats--plat3 .checkBox span {
   position: absolute;
   top: 40px;
-  right: 30px;
+  right: 80px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 95%;
+  color: black;
+  font-size: 18px;
+}
+.menu__plats--plat1 .checkBox i, .menu__plats--plat2 .checkBox i, .menu__plats--plat3 .checkBox i {
+  margin: auto;
+  font-weight: 900;
+  color: white;
 }
 .menu__desserts {
   display: flex;
@@ -829,16 +912,23 @@ img {
 }
 .menu__desserts--dessert1, .menu__desserts--dessert2, .menu__desserts--dessert3 {
   position: relative;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 15px 15px 0 15px;
   z-index: 1;
+  cursor: pointer;
   background-color: white;
   border-radius: 15px;
-  overflow: hidden;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.4);
   height: 70px;
   padding: 0 12px;
+  overflow: hidden;
+}
+.menu__desserts--dessert1:hover .checkBox, .menu__desserts--dessert2:hover .checkBox, .menu__desserts--dessert3:hover .checkBox {
+  transition: transform 400ms ease-in-out;
+  transform: translate(-65px, 0);
+}
+.menu__desserts--dessert1:hover .checkBox i, .menu__desserts--dessert2:hover .checkBox i, .menu__desserts--dessert3:hover .checkBox i {
+  transform: rotate(360deg);
+  transition: transform 400ms ease-in-out;
 }
 .menu__desserts--dessert1 h3, .menu__desserts--dessert2 h3, .menu__desserts--dessert3 h3 {
   position: absolute;
@@ -852,6 +942,7 @@ img {
   text-overflow: ellipsis;
 }
 .menu__desserts--dessert1 p, .menu__desserts--dessert2 p, .menu__desserts--dessert3 p {
+  display: flex;
   position: absolute;
   top: 24px;
   font-family: "Roboto", sans-serif;
@@ -861,13 +952,29 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__desserts--dessert1 span, .menu__desserts--dessert2 span, .menu__desserts--dessert3 span {
+.menu__desserts--dessert1 .checkBox, .menu__desserts--dessert2 .checkBox, .menu__desserts--dessert3 .checkBox {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  right: -68px;
+  width: 15%;
+  height: 100%;
+  background-color: #99E2D0;
+  font-size: 25px;
+}
+.menu__desserts--dessert1 .checkBox span, .menu__desserts--dessert2 .checkBox span, .menu__desserts--dessert3 .checkBox span {
   position: absolute;
   top: 40px;
-  right: 30px;
+  right: 80px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 95%;
+  color: black;
+  font-size: 18px;
+}
+.menu__desserts--dessert1 .checkBox i, .menu__desserts--dessert2 .checkBox i, .menu__desserts--dessert3 .checkBox i {
+  margin: auto;
+  font-weight: 900;
+  color: white;
 }
 .menu__btn {
   margin-top: 70px;
@@ -892,6 +999,13 @@ img {
   text-align: center;
   cursor: pointer;
   box-shadow: 2px 6px 20px rgba(153, 153, 153, 0.6);
+  /*Animation bouton*/
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.menu__btn a:hover {
+  transform: scale(1.35);
+  box-shadow: 2px 6px 20px #6e6e6e;
 }
 
 /*Point de ruptures defined*/
@@ -904,9 +1018,7 @@ img {
 /* largeur max et auto centrage */
 /* Coupure des noms de plats trop long avec points de suspension */
 /*Responsiv Design*/
-/*===================================================
-                    loading spinner
-====================================================*/
+/*===============loading spinner================*/
 .loader {
   perspective: 23rem;
   height: 100vh;
@@ -1002,9 +1114,7 @@ img {
   animation-delay: 0.45s;
 }
 
-/*========================================================================
-                    Apparition progressive des plats
-=========================================================================*/
+/*=====================Apparition progressive des plats====================*/
 @keyframes dishes {
   0% {
     opacity: 0;
@@ -1015,7 +1125,7 @@ img {
     transform: translateY(0);
   }
 }
-/*----------apparition progressive de plats----------*/
+/*----------Delais----------*/
 /*Entrées*/
 .menu__entrees--plat1 {
   animation: dishes 1s ease 300ms 1 normal both;
