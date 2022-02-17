@@ -721,6 +721,7 @@ img {
   border-bottom: 3px #99E2D0 solid;
 }
 .menu__entrees--plat1, .menu__entrees--plat2, .menu__entrees--plat3 {
+  display: flex;
   position: relative;
   margin: 15px 15px 0 15px;
   z-index: 1;
@@ -731,17 +732,34 @@ img {
   height: 70px;
   padding: 0 12px;
   overflow: hidden;
+  max-width: 400px;
+  /*------Responsive Petites Tablettes------*/
+  /*------Responsive Moyennes Tablettes------*/
+}
+@media all and (min-width: 450px) and (max-width: 750px) {
+  .menu__entrees--plat1, .menu__entrees--plat2, .menu__entrees--plat3 {
+    max-width: 425px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media all and (min-width: 751px) and (max-width: 992px) {
+  .menu__entrees--plat1, .menu__entrees--plat2, .menu__entrees--plat3 {
+    margin-left: 30%;
+    margin-right: 30%;
+    max-width: 430px;
+  }
+}
+.menu__entrees--plat1:hover span, .menu__entrees--plat2:hover span, .menu__entrees--plat3:hover span {
+  transition: transform 400ms ease-in-out;
+  transform: translate(-60px, 0);
 }
 .menu__entrees--plat1:hover .checkBox, .menu__entrees--plat2:hover .checkBox, .menu__entrees--plat3:hover .checkBox {
   transition: transform 400ms ease-in-out;
-  transform: translate(-66px, 0);
-  /*------Responsive fractionné pour bon fonctionnement a chaque taille d'ecran------*/
-}
-.menu__entrees--plat1:hover .checkBox span, .menu__entrees--plat2:hover .checkBox span, .menu__entrees--plat3:hover .checkBox span {
-  right: 70px;
+  transform: translate(-65px, 0);
 }
 .menu__entrees--plat1:hover .checkBox i, .menu__entrees--plat2:hover .checkBox i, .menu__entrees--plat3:hover .checkBox i {
-  transform: rotate(1turn);
+  transform: rotate(360deg);
   transition: transform 400ms ease-in-out;
 }
 .menu__entrees--plat1 h3, .menu__entrees--plat2 h3, .menu__entrees--plat3 h3 {
@@ -766,36 +784,24 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__entrees--plat1 .checkBox, .menu__entrees--plat2 .checkBox, .menu__entrees--plat3 .checkBox {
-  display: flex;
-  position: absolute;
-  margin: auto;
-  right: -70px;
-  /*------Responsive fractionné pour bon fonctionnement a chaque taille d'ecran------*/
-  width: 15%;
-  height: 100%;
-  background-color: #99E2D0;
-  font-size: 25px;
-}
-@media screen and (min-width: 475px) and (max-width: 600px) {
-  .menu__entrees--plat1 .checkBox, .menu__entrees--plat2 .checkBox, .menu__entrees--plat3 .checkBox {
-    right: -87px;
-  }
-}
-.menu__entrees--plat1 .checkBox span, .menu__entrees--plat2 .checkBox span, .menu__entrees--plat3 .checkBox span {
+.menu__entrees--plat1 span, .menu__entrees--plat2 span, .menu__entrees--plat3 span {
   position: absolute;
   top: 40px;
-  right: 80px;
-  /*------Responsive fractionné pour bon fonctionnement a chaque taille d'ecran------*/
+  right: 10px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: black;
   font-size: 18px;
 }
-@media screen and (min-width: 475px) and (max-width: 600px) {
-  .menu__entrees--plat1 .checkBox span, .menu__entrees--plat2 .checkBox span, .menu__entrees--plat3 .checkBox span {
-    right: 100px;
-  }
+.menu__entrees--plat1 .checkBox, .menu__entrees--plat2 .checkBox, .menu__entrees--plat3 .checkBox {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  right: -68px;
+  width: 15%;
+  height: 100%;
+  background-color: #99E2D0;
+  font-size: 25px;
 }
 .menu__entrees--plat1 .checkBox i, .menu__entrees--plat2 .checkBox i, .menu__entrees--plat3 .checkBox i {
   margin: auto;
@@ -834,6 +840,27 @@ img {
   height: 70px;
   padding: 0 12px;
   overflow: hidden;
+  max-width: 400px;
+  /*------Responsive Petites Tablettes------*/
+  /*------Responsive Moyennes Tablettes------*/
+}
+@media all and (min-width: 450px) and (max-width: 750px) {
+  .menu__plats--plat1, .menu__plats--plat2, .menu__plats--plat3 {
+    max-width: 425px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media all and (min-width: 751px) and (max-width: 992px) {
+  .menu__plats--plat1, .menu__plats--plat2, .menu__plats--plat3 {
+    margin-left: 30%;
+    margin-right: 30%;
+    max-width: 430px;
+  }
+}
+.menu__plats--plat1:hover span, .menu__plats--plat2:hover span, .menu__plats--plat3:hover span {
+  transition: transform 400ms ease-in-out;
+  transform: translate(-60px, 0);
 }
 .menu__plats--plat1:hover .checkBox, .menu__plats--plat2:hover .checkBox, .menu__plats--plat3:hover .checkBox {
   transition: transform 400ms ease-in-out;
@@ -865,6 +892,15 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu__plats--plat1 span, .menu__plats--plat2 span, .menu__plats--plat3 span {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+}
 .menu__plats--plat1 .checkBox, .menu__plats--plat2 .checkBox, .menu__plats--plat3 .checkBox {
   display: flex;
   position: absolute;
@@ -874,15 +910,6 @@ img {
   height: 100%;
   background-color: #99E2D0;
   font-size: 25px;
-}
-.menu__plats--plat1 .checkBox span, .menu__plats--plat2 .checkBox span, .menu__plats--plat3 .checkBox span {
-  position: absolute;
-  top: 40px;
-  right: 80px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  color: black;
-  font-size: 18px;
 }
 .menu__plats--plat1 .checkBox i, .menu__plats--plat2 .checkBox i, .menu__plats--plat3 .checkBox i {
   margin: auto;
@@ -921,6 +948,27 @@ img {
   height: 70px;
   padding: 0 12px;
   overflow: hidden;
+  max-width: 400px;
+  /*------Responsive Petites Tablettes------*/
+  /*------Responsive Moyennes Tablettes------*/
+}
+@media all and (min-width: 450px) and (max-width: 750px) {
+  .menu__desserts--dessert1, .menu__desserts--dessert2, .menu__desserts--dessert3 {
+    max-width: 425px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media all and (min-width: 751px) and (max-width: 992px) {
+  .menu__desserts--dessert1, .menu__desserts--dessert2, .menu__desserts--dessert3 {
+    margin-left: 30%;
+    margin-right: 30%;
+    max-width: 430px;
+  }
+}
+.menu__desserts--dessert1:hover span, .menu__desserts--dessert2:hover span, .menu__desserts--dessert3:hover span {
+  transition: transform 400ms ease-in-out;
+  transform: translate(-60px, 0);
 }
 .menu__desserts--dessert1:hover .checkBox, .menu__desserts--dessert2:hover .checkBox, .menu__desserts--dessert3:hover .checkBox {
   transition: transform 400ms ease-in-out;
@@ -952,6 +1000,15 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu__desserts--dessert1 span, .menu__desserts--dessert2 span, .menu__desserts--dessert3 span {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+}
 .menu__desserts--dessert1 .checkBox, .menu__desserts--dessert2 .checkBox, .menu__desserts--dessert3 .checkBox {
   display: flex;
   position: absolute;
@@ -961,15 +1018,6 @@ img {
   height: 100%;
   background-color: #99E2D0;
   font-size: 25px;
-}
-.menu__desserts--dessert1 .checkBox span, .menu__desserts--dessert2 .checkBox span, .menu__desserts--dessert3 .checkBox span {
-  position: absolute;
-  top: 40px;
-  right: 80px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  color: black;
-  font-size: 18px;
 }
 .menu__desserts--dessert1 .checkBox i, .menu__desserts--dessert2 .checkBox i, .menu__desserts--dessert3 .checkBox i {
   margin: auto;
